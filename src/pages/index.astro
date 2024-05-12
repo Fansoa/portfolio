@@ -5,17 +5,17 @@ import Card from '../components/Card.astro'
 import ProjectCard from '../components/ProjectCard.astro'
 import Label from '../components/Label.astro'
 import SkillLayout from '../components/SkillLayout.astro'
-import PostPreview from '@/components/blog/PostPreview.astro'
+// import PostPreview from '@/components/blog/PostPreview.astro'
 
 import { Image } from 'astro:assets'
-import astro from '../assets/about-astro.png'
+import astro from '../assets/profilePicture.png'
 
 import { getAllPosts, sortMDByDate } from '@/utils'
 
-const languages = ['lorem', 'ipsum']
-const frontend = ['lorem', 'ipsum', 'lorem', 'ipsum', 'lorem', 'ipsum', 'lorem']
-const backend = ['lorem', 'ipsum', 'lorem', 'ipsum']
-const others = ['lorem', 'ipsum', 'lorem', 'ipsum', 'lorem']
+const languages = ['Javascript', 'Typescript', 'Php']
+const frontend = ['HTML', 'CSS', 'SASS', 'React', 'Nextjs', 'Remix', 'Redwood']
+const backend = ['Node', 'Express']
+const others = ['Github', 'Gitlab', 'Agile','Figma', 'SQL', 'noSQL', 'graphQL', 'Docker']
 
 const MAX_POSTS = 10
 const allPosts = await getAllPosts()
@@ -28,27 +28,16 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			<Image
 				src={astro}
 				alt='profile photo'
-				class='h-28 w-auto rounded-full bg-[#FFBE98] p-2'
+				class='h-28 w-auto rounded-full bg-[#FFF] p-2'
 				loading='eager'
 			/>
 
 			<div class='flex flex-col items-center gap-y-4'>
-				<h1 class='text-3xl font-bold'>Lorem ipsum dolor</h1>
-				<a
-					href='https://github.com/srleom/astro-theme-resume.git'
-					class='flex flex-row items-center gap-x-3 rounded-3xl border border-input px-4 py-2 text-sm shadow-sm transition-all hover:shadow-md'
-				>
-					<span class='relative flex items-center justify-center'>
-						<span
-							class='absolute inline-flex h-2 w-2 animate-ping rounded-full border border-green-400 bg-green-400 opacity-75'
-						></span>
-						<span class='relative inline-flex h-2 w-2 rounded-full bg-green-400'></span>
-					</span>
-
-					<p class='font-medium'>Get free template</p>
+				<h1 class='text-3xl font-bold'>François Verin</h1>
+				
 				</a>
 				<div class='flex flex-wrap justify-center gap-x-7 gap-y-3'>
-					<Label title='Lorem Ipsum'>
+					<Label title='Développeur Front-end'>
 						<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='h-5 w-5' slot='icon'
 							><path
 								fill='currentColor'
@@ -56,7 +45,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 							></path></svg
 						>
 					</Label>
-					<Label title='Ipsum'>
+					<Label title='Paris'>
 						<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='h-5 w-5' slot='icon'
 							><path
 								fill='currentColor'
@@ -67,7 +56,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 					<Label
 						title='Connect on Linkedin'
 						as='a'
-						href='https://www.linkedin.com/in/example/'
+						href='https://www.linkedin.com/in/francoisvrn/'
 						target='_blank'
 					>
 						<svg
@@ -85,17 +74,18 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			</div>
 		</section>
 
-		<Section title='About'>
+		<Section title='Présentation'>
 			<p class='text-muted-foreground'>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis atque quia omnis
-				consectetur, voluptas praesentium veniam blanditiis ratione asperiores accusantium laborum
-				odit commodi quis deserunt incidunt et dolor iure ut! Lorem ipsum dolor sit, amet
-				consectetur adipisicing elit. Alias quia, doloribus ut beatae perspiciatis voluptatibus.
+				Développeur Front-end passionné par la création d'applications web dynamiques. 
+				J'adore me plonger dans des projets passionnants en utilisant des frameworks de pointe basés sur React, 
+				en tirant parti de leurs capacités pour construire des interfaces évolutives, efficaces et esthétiques. 
+				Que ce soit pour créer des mises en page réactives, réaliser une stratégie de développement front, tester mon code ou 
+				optimiser les performances, j'apprécie chaque aspect du processus de développement.
 			</p>
 		</Section>
-		{
+		<!-- {
 			allPostsByDate.length > 0 && (
-				<Section title='Posts'>
+				<Section title='Articles'>
 					<ul class='flex flex-col gap-y-2'>
 						{allPostsByDate.map((p) => (
 							<li class='flex flex-col gap-x-2 sm:flex-row'>
@@ -105,126 +95,192 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 					</ul>
 				</Section>
 			)
-		}
+		} -->
 
-		<Section title='Experience'>
+		<Section title='Expériences'>
 			<Card
-				heading='Lorem Ipsum'
-				subheading='Sit amet consectetur'
-				date='Dec 2022 - Nov 2023'
-				imagePath='/src/assets/about-astro.png'
+				heading='Développeur Front-end'
+				subheading='Tekyn'
+				date='Dec 2021 - Nov 2023'
+				imagePath='/src/assets/tekynLogo.png'
 				altText='Lorem, ipsum dolor sit'
 				imageClass='h-12 w-auto md:-left-16'
 			>
 				<ul class='ml-4 list-disc text-muted-foreground'>
-					<li>
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore debitis recusandae, ut
-						molestiae laboriosam pariatur!
-
-						<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, pariatur!</li>
-					</li>
+					<li>Développement de fonctionnalités</li>
+					<li>Maintenance corrective et évolutive</li>
+					<li>Environnements: ReactJs, Apollo GraphQL, Cucumber, Jest, Storybook, Jsdoc, Emotion, Storybook, React-hook-form, Test Unitaire, Intégration, End to End</li>
+					<li>Test Unitaire, Intégration, End to End</li>
+					<li>Elaboration de la stratégie de test de l'application web</li>
+					<li>Création d'un environnement de test End to End NodeJs avec Selenium webdriver, Webdriver.IO</li>
+					<li>Monitoring de données avec Allure</li>
+					<li>Automatisation des tests API avec Postman (tests fonctionnels)</li>
 				</ul>
 			</Card>
 			<Card
-				heading='Lorem Ipsum'
-				subheading='Sit amet consectetur'
-				date='Dec 2022 - Nov 2023'
-				imagePath='/src/assets/about-astro.png'
+				heading='Barman - Barista'
+				date='2018 - 2021'
 				altText='Lorem, ipsum dolor sit'
 				imageClass='h-12 w-auto md:-left-16'
 			/>
+			<Card
+				heading='Engagé Volontaire de l’Armée de Terre'
+				subheading='4ème RCh'
+				date='2014 - 2017'
+				imagePath='/src/assets/Logo_of_the_French_Army.png'
+				altText='Lorem, ipsum dolor sit'
+				imageClass='h-12 w-auto md:-left-16'
+			>
+				<ul class='ml-4 list-disc text-muted-foreground'>
+					<li>Grenadier Voltigeur</li>
+					<li>Chargeur AMX 10RC</li>
+					<li>Pilote VBL</li>
+					<li>Stage d'aguerissement désert Commando</li>
+					<li>MCD Djibouti</li>
+					<li>OPEX Mali</li>
+				</ul>
+			</Card>
+			<Card
+				heading='Graphiste'
+				subheading='Freelance'
+				date='2013'
+				altText='Lorem, ipsum dolor sit'
+				imageClass='h-12 w-auto md:-left-16'
+			>
+				<ul class='ml-4 list-disc text-muted-foreground'>
+					<li>Animation</li>
+					<li>Motion Design</li>
+					<li>Illustration vectoriel</li>
+					<li>Montage vidéo</li>
+				</ul>
+			</Card>
 		</Section>
 
 		<Section title='Education'>
 			<Card
-				heading='Lorem Ipsum'
-				subheading='Sit amet consectetur'
-				date='Dec 2022 - Nov 2023'
-				imagePath='/src/assets/about-astro.png'
+				heading='Bachelor - Ingénierie du Web'
+				subheading='ESGI'
+				date='Jan 2023 - Jan 2024'
+				imagePath='/src/assets/esgiLogo.jpg'
 				altText='Lorem, ipsum dolor sit'
 				imageClass='h-12 w-auto md:-left-16'
 			>
-				<ul class='ml-4 list-disc text-muted-foreground'>
-					<li>
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore debitis recusandae, ut
-						molestiae laboriosam pariatur!
-
-						<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, pariatur!</li>
-					</li>
-				</ul>
+				<div class='ml-4 list-disc text-muted-foreground'>
+					<h1 class="mt-2">Outils et environnements web</h1>
+					<ul class="ml-8 list-disc text-muted-foreground">
+						<li>Les fondamentaux de Linux</li>
+						<li>Outil de versionning et bonnes pratiques de code Docker</li>
+					</ul>
+					<h1 class="mt-2">Langages et développement web</h1>
+					<ul class="ml-8 list-disc text-muted-foreground">
+						<li>Algorithmes</li>
+						<li>Intégration WEB - HTML5 - CSS3 - jQuery</li>
+						<li>PHP8 - MVC From Scratch</li>
+						<li>Javascript</li>
+						<li>Panorama des CMS</li>
+					</ul>
+					<h1 class="mt-2">Analyse, conception et gestion de projet web</h1>
+					<ul class="ml-8 list-disc text-muted-foreground">
+						<li>Conception WEB - Figma UX/UI</li>
+						<li>Conception de base de données relationnelles</li>
+						<li>Requêtage SQL</li>
+					</ul>
+					<h1 class="mt-2">Communication</h1>
+					<ul class="ml-8 list-disc text-muted-foreground">
+						<li>Anglais professionnel : vocabulaire business, préparation au TOEIC</li>
+						<li>Marketing digital</li>
+					</ul>
+					<h1 class="mt-2">Activités annuelles</h1>
+					<ul class="ml-8 list-disc text-muted-foreground">
+						<li>2 Challenges Stacks Semestriel</li>
+						<li>E-learning</li>
+						<li>Programme Open ESGI et vie d’école</li>
+						<li>Alternance en entreprise</li>
+					</ul>
+				</div>
 			</Card>
 			<Card
-				heading='Lorem Ipsum'
-				subheading='Sit amet consectetur'
-				date='Dec 2022 - Nov 2023'
-				imagePath='/src/assets/about-astro.png'
+				heading="Web@cadémie"
+				subheading='Epitech'
+				date='Oct 2020 - Nov 2022'
+				imagePath='/src/assets/webacademieLogo.png'
 				altText='Lorem, ipsum dolor sit'
 				imageClass='h-12 w-auto md:-left-16'
-			/>
+			>
+			<div class='ml-4 list-disc text-muted-foreground'>
+					Méthodologie d'apprentissage par projets d'Epitech, 10,5 mois d'enseignements, plus de 14 projets, au sein des campus.
+					<br/>
+					Languages: HTML, CSS, SCSS, SASS, Javascript, NodeJS, PHP
+					Frameworks: Symfony, Laravel, ReactNative, ReactJS, NextJS, ExpressJS
+					Databases: MySQL, MongoDb
+					<br/>
+					Projets de développement Web significatifs:
+					<ul class="ml-4 list-disc text-muted-foreground'">
+						<li>Réalisation d'un site à partir de la stack MERN et NextJS avec utilisation d'API (betaseries), permettant aux utilisateurs de gérer leur progression sur les séries qu'ils suivent. 2 personnes/2 semaines.</li>
+						<li>Réalisation d'un site à partir de la stack MERN avec utilisation d'API (openagenda), permettant aux utilisateurs de créer ou de rejoindre des événements organisés. 2 personnes /2 semaines.</li>
+						<li>Réalisation d'un site e-commerce complet avec du symfony pour le back, ReactJS pour le front et MySQL pour la base de donnée. 5 personnes/5 semaines.</li>
+					</ul>
+				</div>
+			</Card>
 		</Section>
 
-		<Section title='Projects'>
+		<Section title='Projets'>
 			<div class='flex flex-col gap-y-3 sm:flex-row sm:gap-x-3 sm:gap-y-0'>
 				<ProjectCard
-					href='https://www.google.com'
-					heading='Consectetur'
-					subheading='Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+					href='https://github.com/Fansoa/boilerplate-front-end-vite-react'
+					heading='Boilerplate Front-end'
+					subheading='vite react react-hook-form react-router vitest'
 					imagePath='/src/assets/coming-soon.png'
 					altText='Example'
 					class='w-full sm:w-1/2'
 				/>
 				<ProjectCard
-					as='div'
-					heading='Coming soon...'
-					subheading=''
-					imagePath='/src/assets/coming-soon.png'
-					altText='Lorem, ipsum dolor sit'
+					href='https://fansoa-pokedex.netlify.app/'
+					heading='Pokedex'
+					subheading='Test technique pour développeur Front-end à Tekyn'
+					imagePath='/src/assets/pokedex.png'
+					altText='pokedex'
+					class='w-full sm:w-1/2'
+				/>
+				<ProjectCard
+					href='https://wakfustrategy.netlify.app/'
+					heading='Wakfu Strategy'
+					subheading='Bestiaire avec affichage des sorts sur une grille'
+					imagePath='/src/assets/wakfuStrategyIllustration.png'
+					altText='wakfu bestiaire'
 					class='w-full sm:w-1/2'
 				/>
 			</div>
 		</Section>
 
-		<Section title='Certifications'>
+		<Section title='Diplômes'>
 			<Card
 				as='a'
-				heading='Lorem ipsum, dolor sit amet consectetur adipisicing.'
-				subheading='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dicta magni consequuntur corrupti.'
-				date='Mar 2024 - Mar 2024'
-				imagePath='/src/assets/about-astro.png'
+				heading='Bachelor - Ingénierie du Web'
+				subheading='ESGI'
+				date='Jan 2024'
+				imagePath='/src/assets/esgiLogo.jpg'
 				altText='Lorem, ipsum dolor sit'
 				imageClass='h-11 w-auto md:-left-16'
-				href='https://www.google.com'
+				href='https://www.esgi.fr/programmes/ingenierie-web.html?utm_source=google&gclid=CjwKCAjw0YGyBhByEiwAQmBEWvkUFQDgOKbhEFHDB8mD0nqRV-qhdJpZsLbqyZS5tdahtGBlmJimahoCD5QQAvD_BwE&CampaignId=17081596535&AdGroupId=&feeditemid=&targetid=&loc_interest_ms=&loc_physical_ms=9056222&matchtype=&network=x&device=c&devicemodel=&creative=&keyword=&placement=&target=&adposition=&utm_medium=display&gad_source=1'
 			/>
 			<Card
 				as='a'
-				heading='Lorem ipsum, dolor sit amet'
-				subheading='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dicta.'
-				date='Mar 2029 - Mar 2032'
-				imagePath='/src/assets/about-astro.png'
+				heading="Titre d'intégrateur et Développeur web"
+				subheading='Titre professionnel RNCP niveau 5 - Epitech'
+				date='Nov 2022'
+				imagePath='/src/assets/webacademieLogo.png'
 				altText='Lorem, ipsum dolor sit'
 				imageClass='h-11 w-auto md:-left-16'
-				href='https://www.google.com'
+				href='https://www.webacademie.org/'
 			/>
 		</Section>
 
-		<Section title='Skills'>
+		<Section title='Compétences'>
 			<SkillLayout title='Languages' skills={languages} />
 			<SkillLayout title='Frontend' skills={frontend} />
 			<SkillLayout title='Backend' skills={backend} />
 			<SkillLayout title='Others' skills={others} />
 		</Section>
 	</div>
-	<a
-		href='https://github.com/srleom/astro-theme-resume.git'
-		class='mt-16 flex flex-row items-center gap-x-3 rounded-3xl border border-input px-4 py-2 text-sm shadow-sm transition-all hover:shadow-md'
-	>
-		<span class='relative flex items-center justify-center'>
-			<span
-				class='absolute inline-flex h-2 w-2 animate-ping rounded-full border border-green-400 bg-green-400 opacity-75'
-			></span>
-			<span class='relative inline-flex h-2 w-2 rounded-full bg-green-400'></span>
-		</span>
-
-		<p class='font-medium'>Get free template</p>
-	</a>
 </PageLayout>

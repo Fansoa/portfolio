@@ -6,38 +6,61 @@ import Button from '@/components/Button.astro'
 const DESIGN = [
 	{
 		name: 'Figma',
-		description: 'Design Tool',
+		description: 'Prototypage',
 		href: 'https://www.figma.com/',
 		iconPath: 'figma',
 		iconBgColour: '#000001'
+	},
+	{
+		name: 'Penpot',
+		description: 'Prototypage',
+		href: 'https://penpot.app/',
+		iconPath: 'penpot',
+		iconBgColour: '#FFF'
 	}
 ]
 
 const PRODUCTIVITY = [
 	{
-		name: 'Arc',
-		description: 'Browser',
-		href: 'https://arc.net/',
-		iconPath: 'arc',
-		iconBgColour: '#414350'
+		name: 'Chrome',
+		description: 'Navigateur',
+		href: 'https://www.google.com/chrome',
+		iconPath: 'chrome',
+		iconBgColour: '#FFF'
 	},
 	{
 		name: 'Notion',
-		description: 'Note Taking',
+		description: 'Espace de travail',
 		href: 'https://www.notion.so/product',
 		iconPath: 'notion',
 		iconBgColour: '#EFEFEE'
 	},
 	{
 		name: 'Obsidian',
-		description: 'Long-form Writing',
+		description: 'Prise de note',
 		href: 'https://obsidian.md/',
 		iconPath: 'obsidian',
 		iconBgColour: '#7A3EE8'
+	},
+	{
+		name: 'Whimsical',
+		description: 'Carte mental, schémas, etc..',
+		href: 'https://whimsical.com/',
+		iconPath: 'whimsical',
+		iconBgColour: '#FFF'
 	}
+
+
 ]
 
 const DEVELOPMENT = [
+	{
+		name: 'Ubuntu',
+		description: 'Distribution',
+		href: 'https://www.ubuntu-fr.org/',
+		iconPath: 'ubuntu',
+		iconBgColour: '#2C2C32'
+	},
 	{
 		name: 'VS Code',
 		description: 'IDE',
@@ -51,13 +74,120 @@ const DEVELOPMENT = [
 		href: 'https://chat.openai.com/',
 		iconPath: 'chatgpt',
 		iconBgColour: '#06A67F'
+	},
+	{
+		name: 'React',
+		description: 'Lib',
+		href: 'https://fr.react.dev/',
+		iconPath: 'react',
+		iconBgColour: '#06A67F'
+	},
+	{
+		name: 'Next',
+		description: 'Framework',
+		href: 'https://nextjs.org/',
+		iconPath: 'next',
+		iconBgColour: '#06A67F'
+	},
+	{
+		name: 'Remix',
+		description: 'Framework',
+		href: 'https://remix.run/',
+		iconPath: 'remix',
+		iconBgColour: '#06A67F'
+	},
+	{
+		name: 'Redwood',
+		description: 'Framework',
+		href: 'https://redwoodjs.com/',
+		iconPath: 'redwood',
+		iconBgColour: '#06A67F'
+	},
+	{
+		name: 'Vite',
+		description: 'Development Environment',
+		href: 'https://vitejs.dev/',
+		iconPath: 'vite',
+		iconBgColour: '#06A67F'
+	},
+	{
+		name: 'Vitest',
+		description: 'Lib',
+		href: 'https://vitest.dev/',
+		iconPath: 'vitest',
+		iconBgColour: '#06A67F'
+	},
+	{
+		name: 'React Testing Library',
+		description: 'Lib',
+		href: 'https://testing-library.com',
+		iconPath: 'npm',
+		iconBgColour: '#06A67F'
+	},
+	{
+		name: 'WebdriverIO',
+		description: 'Lib',
+		href: 'https://webdriver.io/',
+		iconPath: 'webdriverio',
+		iconBgColour: '#06A67F'
+	},
+	{
+		name: 'React Hook Form',
+		description: 'Lib',
+		href: 'https://react-hook-form.com/',
+		iconPath: 'npm',
+		iconBgColour: '#06A67F'
+	},
+	{
+		name: 'React Router',
+		description: 'Lib',
+		href: 'https://reactrouter.com/en/main',
+		iconPath: 'reactrouter',
+		iconBgColour: '#06A67F'
+	},
+	{
+		name: 'i18next',
+		description: 'Lib',
+		href: 'https://www.i18next.com/',
+		iconPath: 'i18next',
+		iconBgColour: '#06A67F'
+	},
+	{
+		name: 'Storybook',
+		description: 'Lib',
+		href: 'https://storybook.js.org/',
+		iconPath: 'storybook',
+		iconBgColour: '#06A67F'
+	},
+	{
+		name: 'Apollo Client',
+		description: 'Lib',
+		href: 'https://www.apollographql.com/docs/react/',
+		iconPath: 'apollographql',
+		iconBgColour: '#06A67F'
+	},
+	{
+		name: 'Tailwind',
+		description: 'Lib',
+		href: 'https://tailwindcss.com/',
+		iconPath: 'tailwindcss',
+		iconBgColour: '#06A67F'
+	},
+	{
+		name: 'Emotion',
+		description: 'Lib',
+		href: 'https://emotion.sh/docs/introduction',
+		iconPath: 'npm',
+		iconBgColour: '#06A67F'
 	}
+	
 ]
+
 ---
 
 <PageLayout meta={{ title: 'Home' }}>
 	<div class='w-full'>
-		<Button title='Back' href='/' style='button'>
+		<Button title='Retour' href='/' style='button'>
 			<svg
 				xmlns='http://www.w3.org/2000/svg'
 				width='14'
@@ -76,12 +206,12 @@ const DEVELOPMENT = [
 		<div class='mt-5 flex w-full flex-col gap-y-10'>
 			<div>
 				<h1 class='mb-1 text-2xl font-bold'>Tools</h1>
-				<p>Tools and software I use daily</p>
+				<p>Outils et logiciels que j'utilise au quotidien</p>
 			</div>
 
 			<ToolSection title='Design' tools={DESIGN} />
-			<ToolSection title='Productivity' tools={PRODUCTIVITY} />
-			<ToolSection title='Development' tools={DEVELOPMENT} />
+			<ToolSection title='Productivité' tools={PRODUCTIVITY} />
+			<ToolSection title='Développement' tools={DEVELOPMENT} />
 		</div>
 	</div>
 </PageLayout>

@@ -7,7 +7,7 @@ export const siteConfig: SiteConfig = {
 	// Meta property used to construct the meta title property, found in src/components/BaseHead.astro L:11
 	title: 'Portfolio',
 	// Meta property used as the default description meta property
-	description: 'Découvrez mes projets de développement web ! Explorez mes réalisations créatives et fonctionnelles, démontrant mes compétences en HTML, CSS, JavaScript et plus encore. Chaque site web est une vitrine de mes capacités, combinant savoir-faire technique et passion pour la conception. Plongez dans mon portfolio pour voir comment je transforme des idées en réalité digitale.',
+	description: "Découvrez mes réalisations en développement web ! Explorez mes projets créatifs et fonctionnels. Plongez également dans mon parcours professionnel et les divers outils ainsi que les technologies que j'utilise au quotidien en tant que développeur web.",
 	// HTML lang property, found in src/layouts/Base.astro L:18
 	lang: 'fr',
 	// Meta property, found in src/components/BaseHead.astro L:42
